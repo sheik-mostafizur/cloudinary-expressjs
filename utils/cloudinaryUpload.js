@@ -2,11 +2,11 @@ const cloudinary = require("./cloudinary.config");
 
 exports.cloudinaryUpload = async (imagePath) => {
   const options = {
-    // use_filename: true,
-    // unique_filename: false,
+    use_filename: true,
+    unique_filename: true,
     // overwrite: true,
     resource_type: "image",
-    folder: "edust-org",
+    folder: "cloudinary-expressjs",
   };
 
   try {

@@ -8,9 +8,15 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
-
-app.get("/", function (req, res) {
+app.use(
+  cors({
+    origin: "http://127.0.0.1:5500", // Adjust to match your frontend's origin
+    methods: ["GET", "POST"], // Allow specific HTTP methods
+    allowedHeaders: ["Content-Type"], // Allow specific headers
+  })
+);
+app.use("/image-upload", require("./image-upload"));
+app.get("/", function (_req, res) {
   res.send("Hello World");
 });
 
