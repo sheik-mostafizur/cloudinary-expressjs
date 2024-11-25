@@ -1,0 +1,15 @@
+### Home
+GET http://localhost:3000 HTTP/1.1
+
+
+### Image upload as binary
+GET http://localhost:3000/image-upload HTTP/1.1
+
+### Image upload as binary
+POST http://localhost:3000/image-upload HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Abdur Rohim"
+}
+
